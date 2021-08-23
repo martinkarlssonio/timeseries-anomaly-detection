@@ -53,7 +53,7 @@ It utilizes multiprocessing to efficiently run multiple RCCF processes in parall
 
 ### Martin Karlsson
 
-LinkedIn : [www.martinkarlsson.io][linkedin-url] \
+LinkedIn : [martin-karlsson][linkedin-url] \
 Twitter : [@HelloKarlsson](https://twitter.com/HelloKarlsson) \
 Email : hello@martinkarlsson.io \
 Webpage : [www.martinkarlsson.io](https://www.martinkarlsson.io)
