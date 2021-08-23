@@ -62,7 +62,7 @@ Email : hello@martinkarlsson.io \
 Webpage : [www.martinkarlsson.io](https://www.martinkarlsson.io)
 
 
-Project Link: https://github.com/martinkarlssonio/timeseries-anomaly-detection](https://github.com/martinkarlssonio/timeseries-anomaly-detection)
+Project Link: [github.com/martinkarlssonio/timeseries-anomaly-detection](https://github.com/martinkarlssonio/timeseries-anomaly-detection)
 
 
 
