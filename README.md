@@ -1,4 +1,5 @@
-# timeseries-anomaly-detection
+# Anomaly Detection in Time-Series Data
+### Using Robust Random Cut Forest and Multiprocessing
 
 <!--
 *** Written by Martin Karlsson
@@ -15,7 +16,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![Plot of data and anomaly rating](plot-output-small)
+![Plot of data and anomaly rating][plot-output-small]
 
 Purpose for this tutorial is to show how to easily utilize a Robust Random Cut Forest neural network to find anomalies in time series data.
 It will utilize multiprocessing to efficiently run multiple RCCF processes in parallell. This will decrease the execution time.
@@ -53,8 +54,12 @@ It will utilize multiprocessing to efficiently run multiple RCCF processes in pa
 <!-- CONTACT -->
 ## Contact
 
-Martin Karlsson - [@HelloKarlsson](https://twitter.com/HelloKarlsson) - hello@martinkarlsson.io
-[www.martinkarlsson.io](https://www.martinkarlsson.io)
+###Martin Karlsson
+
+Twitter : [@HelloKarlsson](https://twitter.com/HelloKarlsson) \
+Email : hello@martinkarlsson.io \
+Webpage : [www.martinkarlsson.io](https://www.martinkarlsson.io) \
+
 
 Project Link: https://github.com/martinkarlssonio/timeseries-anomaly-detection](https://github.com/martinkarlssonio/timeseries-anomaly-detection)
 
