@@ -6,10 +6,6 @@
 *** www.martinkarlsson.io
 -->
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
@@ -57,6 +53,7 @@ It utilizes multiprocessing to efficiently run multiple RCCF processes in parall
 
 ### Martin Karlsson
 
+LinkedIn : [www.martinkarlsson.io][linkedin-url] \
 Twitter : [@HelloKarlsson](https://twitter.com/HelloKarlsson) \
 Email : hello@martinkarlsson.io \
 Webpage : [www.martinkarlsson.io](https://www.martinkarlsson.io)
@@ -67,16 +64,6 @@ Project Link: [github.com/martinkarlssonio/timeseries-anomaly-detection](https:/
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/martin-karlsson
 [plot-output-small]: images/plot_output_small.png
