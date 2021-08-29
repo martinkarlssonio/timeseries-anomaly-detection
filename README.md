@@ -70,4 +70,4 @@ Project Link: [github.com/martinkarlssonio/timeseries-anomaly-detection](https:/
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/martin-karlsson
 [plot-data]: images/plot_data.png
-[plot-currency]: images/plot_currency.png
+[plot-currency]: images/plot_currency_marked.png
