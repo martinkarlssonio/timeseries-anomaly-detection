@@ -15,9 +15,12 @@
 Purpose for this tutorial is to show how to easily utilize a Robust Random Cut Forest neural network to find anomalies in time series data. \
 It utilizes multiprocessing to efficiently run multiple RCCF processes in parallell. This will decrease the execution time.
 
+The tutorial also shows how it can be adapted to detect unusual movements in financial instruments.
 
-![Plot of data and anomaly rating][plot-output-small]
+![Plot of data and anomaly rating][plot-data]
 
+### Find anomal behavior in financial data
+![Plot of data and anomaly rating][plot-currency]
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -66,4 +69,5 @@ Project Link: [github.com/martinkarlssonio/timeseries-anomaly-detection](https:/
 <!-- MARKDOWN LINKS & IMAGES -->
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/martin-karlsson
-[plot-output-small]: images/plot_output_small.png
+[plot-data]: images/plot_data.png
+[plot-currency]: images/plot_currency.png

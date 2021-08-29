@@ -25,7 +25,7 @@ shingle_size = 15
 tree_size = 256
 
 #Path to the dataset
-datasetPath = 'data/example-dataset.csv'
+datasetPath = 'data/currency-dataset.csv'
 
 def anomalyRate(data,anomaly):
     dataLen = int(len(data))
@@ -64,10 +64,12 @@ def anomalyRate(data,anomaly):
 def __main__():
     dataframe = pd.read_csv(datasetPath)
     epochs = dataframe['epoch'].tolist()
-    #Get all the columns in the dataframe
+    #Get all the columns in the dataframe, date,epoch,open,high,low,close,volume,macd,rsi,sma10,sma20,instrumentId
     dataTitles = dataframe.keys()
     dataTitles = dataTitles.tolist() #Makes a list of it
     dataTitles.remove('epoch') #Remove epoch from the list
+    dataTitles.remove('date') #Remove date from the list
+    dataTitles.remove('instrumentId') #Remove instrumentId from the list
 
     #Generate a dict with all the data in list format
     dataDict = {}
@@ -85,35 +87,25 @@ def __main__():
     data7Anomaly = manager.list()
     data8Anomaly = manager.list()
     data9Anomaly = manager.list()
-    data10Anomaly = manager.list()
-    data11Anomaly = manager.list()
-    data12Anomaly = manager.list()
-
     #Creates all the processes
     processes = []
-    process = Process(target=anomalyRate, args=(dataDict['data1'],data1Anomaly,))
+    process = Process(target=anomalyRate, args=(dataDict['open'],data1Anomaly,))
     processes.append(process)
-    process = Process(target=anomalyRate, args=(dataDict['data2'],data2Anomaly,))
+    process = Process(target=anomalyRate, args=(dataDict['high'],data2Anomaly,))
     processes.append(process)
-    process = Process(target=anomalyRate, args=(dataDict['data3'],data3Anomaly,))
+    process = Process(target=anomalyRate, args=(dataDict['low'],data3Anomaly,))
     processes.append(process)
-    process = Process(target=anomalyRate, args=(dataDict['data4'],data4Anomaly,))
+    process = Process(target=anomalyRate, args=(dataDict['close'],data4Anomaly,))
     processes.append(process)
-    process = Process(target=anomalyRate, args=(dataDict['data5'],data5Anomaly,))
+    process = Process(target=anomalyRate, args=(dataDict['volume'],data5Anomaly,))
     processes.append(process)
-    process = Process(target=anomalyRate, args=(dataDict['data6'],data6Anomaly,))
+    process = Process(target=anomalyRate, args=(dataDict['macd'],data6Anomaly,))
     processes.append(process)
-    process = Process(target=anomalyRate, args=(dataDict['data7'],data7Anomaly,))
+    process = Process(target=anomalyRate, args=(dataDict['rsi'],data7Anomaly,))
     processes.append(process)
-    process = Process(target=anomalyRate, args=(dataDict['data8'],data8Anomaly,))
+    process = Process(target=anomalyRate, args=(dataDict['sma10'],data8Anomaly,))
     processes.append(process)
-    process = Process(target=anomalyRate, args=(dataDict['data9'],data9Anomaly,))
-    processes.append(process)
-    process = Process(target=anomalyRate, args=(dataDict['data10'],data10Anomaly,))
-    processes.append(process)
-    process = Process(target=anomalyRate, args=(dataDict['data11'],data11Anomaly,))
-    processes.append(process)
-    process = Process(target=anomalyRate, args=(dataDict['data12'],data12Anomaly,))
+    process = Process(target=anomalyRate, args=(dataDict['sma20'],data9Anomaly,))
     processes.append(process)
     
     #Start all the processes
@@ -128,9 +120,13 @@ def __main__():
         process.join()
 
     #Initiate the plot area
-    fig, axs = plt.subplots(2,1,figsize=(16,9), gridspec_kw={'height_ratios': [4, 1]})
-    axs[0].set_title("data")
-    axs[1].set_title("anomaly")
+    fig, axs = plt.subplots(6,1,figsize=(16,9), gridspec_kw={'height_ratios': [2, 1, 1, 1, 1, 1]})
+    axs[0].set_title("open,high,low,close")
+    axs[1].set_title("macd")
+    axs[2].set_title("sma10,sma20")
+    axs[3].set_title("rsi")
+    axs[4].set_title("volume")
+    axs[5].set_title("anomaly")
     axs[0].xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d %H:%M')) #Set to show date
     timestamps = []
 
@@ -153,15 +149,24 @@ def __main__():
                 usedColors = []
         usedColors.append(color)
         #Plot the data
-        axs[0].plot(timestamps,dataDict[data],linewidth=1,color=color)
+        if data == "open" or data == "high" or data == "low" or data == "close":
+            axs[0].plot(timestamps,dataDict[data],linewidth=1,color=color)
+        elif data == "macd":
+            axs[1].plot(timestamps,dataDict[data],linewidth=1,color=color)
+        elif data == "sma10" or data == "sma20":
+            axs[2].plot(timestamps,dataDict[data],linewidth=1,color=color)
+        elif data == "rsi":
+            axs[3].plot(timestamps,dataDict[data],linewidth=1,color=color)
+        elif data == "volume":
+            axs[4].plot(timestamps,dataDict[data],linewidth=1,color=color)
 
     #Creates a list with the average anomaly rating for all dataseries
     anomalyCombined = []
     for n in range(0,len(epochs)):
-        anomalyCombined.append((data1Anomaly[n]+data2Anomaly[n]+data3Anomaly[n]+data4Anomaly[n]+data5Anomaly[n]+data6Anomaly[n]+data7Anomaly[n]+data8Anomaly[n]+data9Anomaly[n]+data10Anomaly[n]+data11Anomaly[n]+data12Anomaly[n])/12)
+        anomalyCombined.append((data1Anomaly[n]+data2Anomaly[n]+data3Anomaly[n]+data4Anomaly[n]+data5Anomaly[n]+data6Anomaly[n]+data7Anomaly[n]+data8Anomaly[n]+data9Anomaly[n])/9)
 
     #Plotting the anomaly rating in the second plot area
-    axs[1].plot(timestamps,anomalyCombined,linewidth=1,color="red")
+    axs[5].plot(timestamps,anomalyCombined,linewidth=1,color="red")
     plt.show()
 
 __main__()
