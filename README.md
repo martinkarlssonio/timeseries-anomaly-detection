@@ -19,7 +19,7 @@ The tutorial also shows how it can be adapted to detect unusual movements in fin
 
 ![Plot of data and anomaly rating][plot-data]
 
-### Find anomal behavior in financial data
+### Find anomalies in financial data
 ![Plot of data and anomaly rating][plot-currency]
 
 <!-- GETTING STARTED -->
