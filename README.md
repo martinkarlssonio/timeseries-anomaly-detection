@@ -1,5 +1,5 @@
 # Anomaly Detection in Time-Series Data
-### Using Robust Random Cut Forest and Multiprocessing
+### Using Machine Learning (Robust Random Cut Forest) and Multiprocessing
 
 <!--
 *** Written by Martin Karlsson
@@ -15,11 +15,12 @@
 Purpose for this tutorial is to show how to easily utilize a Robust Random Cut Forest neural network to find anomalies in time series data. \
 It utilizes multiprocessing to efficiently run multiple RCCF processes in parallell. This will decrease the execution time.
 
-The tutorial also shows how it can be adapted to detect unusual movements in financial instruments.
-
 ![Plot of data and anomaly rating][plot-data]
 
 ### Find anomalies in financial data
+
+The tutorial also shows how it can be adapted to detect unusual movements in financial instruments.
+
 ![Plot of data and anomaly rating][plot-currency]
 
 <!-- GETTING STARTED -->
