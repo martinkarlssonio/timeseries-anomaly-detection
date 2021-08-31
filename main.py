@@ -62,6 +62,7 @@ def anomalyRate(data,anomaly):
         anomaly.append(0)
 
 def __main__():
+    print("### Reading data set ###")
     dataframe = pd.read_csv(datasetPath)
     epochs = dataframe['epoch'].tolist()
     #Get all the columns in the dataframe
@@ -117,6 +118,7 @@ def __main__():
     processes.append(process)
     
     #Start all the processes
+    print("### Starting all sub-processes ###")
     startProcessesCounter = 0
     processesLen = len(processes)
     while startProcessesCounter < processesLen:
@@ -163,5 +165,6 @@ def __main__():
     #Plotting the anomaly rating in the second plot area
     axs[1].plot(timestamps,anomalyCombined,linewidth=1,color="red")
     plt.show()
+    print("### Execution done. ###")
 
 __main__()
