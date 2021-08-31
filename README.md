@@ -13,7 +13,7 @@
 ## About The Project
 
 Purpose for this tutorial is to show how to easily utilize a Robust Random Cut Forest neural network to find anomalies in time series data. \
-It utilizes multiprocessing to efficiently run multiple RCCF processes in parallell. This will decrease the execution time.
+It utilizes multiprocessing to efficiently run multiple RRCF processes in parallell. This will decrease the execution time.
 
 ![Plot of data and anomaly rating][plot-data]
 
