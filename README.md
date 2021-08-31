@@ -15,11 +15,13 @@
 Purpose for this tutorial is to show how to easily utilize a Robust Random Cut Forest neural network to find anomalies in time series data. \
 It utilizes multiprocessing to efficiently run multiple RRCF processes in parallell. This will decrease the execution time.
 
+The code in main.py uses 'example-dataset.csv' which is a set of mocked time-series data.
+
 ![Plot of data and anomaly rating][plot-data]
 
 ### Find anomalies in financial data
 
-The tutorial also shows how it can be adapted to detect unusual movements in financial instruments.
+By executing "currency.py" it also shows how it can be adapted to detect unusual movements in financial instruments.
 
 ![Plot of data and anomaly rating][plot-currency]
 
